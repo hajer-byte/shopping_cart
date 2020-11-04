@@ -1,22 +1,140 @@
+body{
+    display: block;
+    align-content: space-between;
+    
+}
 .big_card{
     display: flex;
     justify-content:space-around;
-    margin: 2rem;
     flex-wrap: wrap;
 }
+.navBar{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+.coll{
+    width: 5rem !important;
+    background-color: rgba(0,0, 0,0.1);
+}
+
 .button{
-    display:flex; 
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     flex-wrap: wrap;
+    position: absolute;
+    top: 33.9rem;
+    left: -0.09px;
+    height: 3rem;
+    width: 18rem;
+    margin-top: 5px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.btn{
+    background:  rgb(238, 126, 216);
 }
 .btn-space{
     margin-top: 4rem;
 }
 .hover:hover{
-    color: indianred;
+    color:  rgb(242, 52, 204);
 }
 @media only screen and (max-width: 654px){
-.card{
+.Card{
     width: 30rem !important;
 }
+.button{  
+    width: 25rem !important;
+}
+.card-text{
+    display: none;
+}
+.titl{
+    position: absolute;
+    left: 1.75em !important;
+    margin-bottom: 2rem !important;
+}
+.hover{
+    margin-top: 1px;
+    margin-bottom: -20px;
+}
+}
+
+.CardB{
+    border-radius: 18px !important;
+    cursor: pointer;
+    font-family: roboto;
+    box-shadow: 5px 5px 5px 15px rgba(0,0, 0,0.1);
+    text-align: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:15px;
+    margin-top:7rem;
+    height: 37em !important;
+    overflow: hidden;
+}
+.card-body{
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+}
+.Card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  }
+.card-text{
+    margin: 9px;
+    color: grey;
+    font-size:15px;
+    font-weight: 300;
+    font-family: 'Dancing Script', cursive;
+}
+
+.card-title{
+    color:  rgb(225, 99, 200);
+    font-size:28px;
+    font-family: 'Pacifico', cursive;
+
+}
+.card-img-top{
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    background-size: cover;
+}
+
+.titl{
+   font-size:3em;
+   color:#fff;
+   font-family: 'Pacifico', cursive;
+   font-family: 'Ultra', serif;
+    position: absolute;
+    top: 10%;
+    left: 37%;
+    margin: 1rem;
+    padding: 10px 20px 20em 15rem;
+    text-shadow: 0 10px 50px #f8f6f6;
+}
+.titl:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    z-index: -1;
+    color:  rgb(242, 88, 211);
+
+}
+.decoration{
+    text-decoration: none !important;
+    color: azure;
+}
+.body{
+    display: flex;
+    justify-content: center;
+}
+.block{
+    display:block;
+    padding: 2rem;
 }

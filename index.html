@@ -10,10 +10,33 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Ultra&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/cart.css" />
   </head>
-  <body>
-    <div class="pos-f-t">
+  <body
+    style="
+      background-color: rgba(0, 0, 0, 0.9);
+      background-image: url(./css/background.jpg);
+    "
+  >
+    <div class="pos-f-t navBar">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h4 class="text-white">Your shopping cart content 💗</h4>
+          <span class="collapseSpace text-muted">cart elements</span>
+        </div>
+      </div>
       <nav class="navbar navbar-dark bg-dark">
         <button
           class="navbar-toggler"
@@ -23,173 +46,126 @@
           aria-controls="navbarToggleExternalContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          onclick="cartDisplay()"
         >
-          <span class="navbar-toggler-icon"></span>
-          Check card!
-        </button>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarToggleExternalContent"
-          aria-controls="navbarToggleExternalContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          onclick="cartClear()"
-          data-toggle="modal"
-          data-target=".bd-example-modal-lg"
-        >
-          <span class="navbar-toggler-icon"></span>
-          Clear card!
+          <a class="decoration" href="#bottom">
+            <span class="navbar-toggler-icon"></span>
+            Check cart
+          </a>
         </button>
       </nav>
     </div>
-    <div class="big_card">
-      <div class="card border-secondary mb-3 card1" style="width: 18rem">
-        <img
-          class="card-img-top"
-          src="./css/clothes.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">
-            Stylish Mens Jacket
-            <img
-              src="https://img.icons8.com/ios-glyphs/30/000000/like.png"
-              id="heart1"
-              onclick="heartColor1();"
-            />
-          </h5>
-          <p class="card-text">
-            <span class="hover">Price: €105.20 EUR <br /></span>
-            2018 New Fashion Brand Clothing Jacket Men Casual Mandarin Collar
-            Mens Coat Gradient knitting Zippers Mens Jackets And Coats.
-          </p>
-          <div class="button">
-            <a href="#" class="btn btn-outline-success" onclick="addToCard1()">
-              +
-            </a>
-            <a
-              href="#"
-              class="btn btn-outline-primary"
-              onclick="deleteFromCard1()"
-            >
-              -
-            </a>
+    <div class="content">
+      <div class="big_card">
+        <div
+          class="card Card CardB border-secondary mb-3 card1"
+          style="width: 18rem"
+        >
+          <img
+            class="card-img-top"
+            src="./css/clothes.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              <span class="elementName">Stylish Mens Jacket</span><br />
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/000000/like.png"
+                id="imgH"
+              />
+            </h5>
+            <p class="card-text">
+              <span class="hover"
+                >Price: € <span class="price">105</span> EUR <br
+              /></span>
+              2018 New Fashion Brand Clothing Jacket Men Casual Mandarin Collar.
+            </p>
+            <div class="button">
+              <a class="btn btn-outline-dark btnPlus"> add to cart </a>
+              <a class="btn btn-outline-dark btnMn"> remove from cart </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="card Card CardB border-secondary mb-3 card2"
+          style="width: 18rem"
+        >
+          <img
+            class="card-img-top"
+            src="./css/clothe.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              <span class="elementName">mens Coat</span><br />
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/000000/like.png"
+                class="imgH"
+              />
+            </h5>
+            <p class="card-text">
+              <span class="hover"
+                >Price: € <span class="price">200</span> EUR<br
+              /></span>
+              Denim-Leaf Men Coat Thick Warm Wool Coat Slim Fit.
+            </p>
+            <div class="button">
+              <a class="btn btn-outline-dark btnPlus"> add to cart </a>
+              <a class="btn btn-outline-dark btnMn"> remove from cart </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="card Card CardB border-secondary mb-3 card3"
+          style="width: 18rem"
+        >
+          <img
+            class="card-img-top"
+            src="./css/clothes5.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              <span class="elementName">Shirt For Women</span> <br />
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/000000/like.png"
+                class="imgH"
+              />
+            </h5>
+            <p class="card-text">
+              <span class="hover"
+                >Price:€ <span class="price">50</span> EUR <br
+              /></span>
+              Casual V- Neck Stripes Loose Shirt For Women.
+            </p>
+            <div class="button">
+              <a class="btn btn-outline-dark btnPlus"> add to cart </a>
+              <a class="btn btn-outline-dark btnMn"> remove from cart </a>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="card border-secondary mb-3 card2" style="width: 18rem">
-        <img class="card-img-top" src="./css/clothe.jpg" alt="Card image cap" />
-        <div class="card-body">
-          <h5 class="card-title">
-            Long mens Coat
-            <img
-              src="https://img.icons8.com/ios-glyphs/30/000000/like.png"
-              id="heart2"
-              onclick="heartColor2();"
-            />
-          </h5>
-          <p class="card-text">
-            <span class="hover">Price: €200.50 EUR<br /></span>
-            Denim-Leaf Men Coat Thick Warm Wool Coat Slim Fit Coat Mandarin
-            Collar Jacket Mens Overcoat Mens Coats.
-          </p>
-          <div class="button">
-            <a href="#" class="btn btn-outline-success" onclick="addToCard2()">
-              +
-            </a>
-            <a
-              href="#"
-              class="btn btn-outline-primary"
-              onclick="deleteFromCard2()"
-            >
-              -
-            </a>
-          </div>
+      <div class="card CardB bg-dark text-white block" id="bottom">
+        <h5 class="card-title">Your shopping cart:</h5>
+        <div>
+          the total price in your cart is : <span class="total">0</span>
         </div>
-      </div>
-
-      <div class="card border-secondary mb-3 card3" style="width: 18rem">
-        <img
-          class="card-img-top"
-          src="./css/clothes5.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">
-            Shirt For Women
-            <img
-              src="https://img.icons8.com/ios-glyphs/30/000000/like.png"
-              id="heart3"
-              onclick="heartColor3();"
-            />
-          </h5>
-          <p class="card-text">
-            <span class="hover">Price: €50.30 EUR <br /></span>
-            Casual V- Neck Stripes Loose Shirt For Women.
-          </p>
-          <div class="button btn-space">
-            <a href="#" class="btn btn-outline-success" onclick="addToCard3()">
-              +
-            </a>
-            <a
-              href="#"
-              class="btn btn-outline-primary"
-              onclick="deleteFromCard3()"
-            >
-              -
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card border-secondary mb-3 card4" style="width: 18rem">
-        <img
-          class="card-img-top"
-          src="./css/clthes2.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">
-            Short mens Coat
-            <img
-              src="https://img.icons8.com/ios-glyphs/30/000000/like.png"
-              id="heart4"
-              onclick="heartColor4();"
-            />
-          </h5>
-          <p class="card-text">
-            <span class="hover">Price: €124.45 EUR <br /></span>
-            designer black mens coat for men design 3 wm42.
-          </p>
-          <div class="button btn-space">
-            <a href="#" class="btn btn-outline-success" onclick="addToCard4()">
-              +
-            </a>
-            <a
-              href="#"
-              class="btn btn-outline-primary"
-              onclick="deleteFromCard4()"
-            >
-              -
-            </a>
-          </div>
-        </div>
+        <p id="CART"></p>
       </div>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
+      async
     ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
+      async
     ></script>
-    <script src="./js/cart.js"></script>
+    <script src="./js/cart.js" async></script>
   </body>
 </html>

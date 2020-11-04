@@ -1,83 +1,53 @@
 
-function heartColor1(){
-document.getElementById('heart1').style.filter="invert(90%) sepia(90%) saturate(3207%) hue-rotate(240deg) brightness(90%) contrast(90%)";
-}
+const addToCart = document.querySelectorAll(".btnPlus");
+//console.log(addToCart);
+//console.log(Array.from(addToCart));
+Array.from(addToCart).map((el) => {
+el.addEventListener("click",() => {
+    el.innerHTML="added ✌️";
 
-function heartColor2(){
-document.getElementById('heart2').style.filter="invert(90%) sepia(90%) saturate(3207%) hue-rotate(240deg) brightness(90%) contrast(90%)";
-}
+    const divE = document.createElement('div');
+    //each element's name
+    const ElementName = document.querySelectorAll(".elementName").innerHTML;
+    //each price 
+    const price = document.querySelectorAll('#price').innerHTML;
+    //total price
+    const total = Number(document.querySelectorAll('.total').textContent);
+    total.innerHTML=parseInt(total.innerHTML)+parseInt(el.nextElementSibling.innerHTML);
+    divE.className = 'ContentAdded alert alert-light parentELem p-0';
 
-function heartColor3(){
-document.getElementById('heart3').style.filter="invert(90%) sepia(90%) saturate(3207%) hue-rotate(240deg) brightness(90%) contrast(90%)";
-}
+  divE.innerHTML = `
+ ${ElementName} that costs: ${price}
+  <input class="quantity" id="id_form-0-quantity" min="0" 
+  name="form-0-quantity" value="1" type="number" 
+  style="width:4.3em; height:2.3rem;">
+  `;
+  document.querySelector('#CART').appendChild(divE);
+});
+})
+/////////////////////////////////////////////////////////////////
+const removeButn = document.querySelectorAll('.btnMn');
 
-function heartColor4(){
-document.getElementById('heart4').style.filter="invert(90%) sepia(90%) saturate(3207%) hue-rotate(240deg) brightness(90%) contrast(90%)";
-}
-            
-  elem1=0;
-  cost=0;
-function addToCard1(){
-    elem1+=1
-    cost+=105.20;
-    return(elem1)
-}
-function deleteFromCard1(){
-    elem1-=1
-    cost-=105.20;
-    return(elem1)
-}
+Array.from(removeButn).map((el) => {
+el.addEventListener("click",() => {
+    el.innerHTML="removed ✌️";
+    document.querySelector('.ContentAdded').remove();
+  })
+})
+/////////////////////////////////////////////////////////////////
+const removeButton = document.querySelectorAll('.removeBUTTON');
+Array.from(removeButton).map((el) => {
+  el.addEventListener("click", () => {
+    el.parentElement.remove();
+  })
+})
 
-  elem2=0;
-function addToCard2(){
-    elem2+=1;
-    cost+=200.50;
-    return(elem2)
-}
-function deleteFromCard2(){
-    elem2-=1;
-    cost-=200.50;
-    return(elem2)
-}
-
-  elem3=0;
-function addToCard3(){
-    elem3+=1;
-    cost+=50.30;
-    return(elem3)
-}
-function deleteFromCard3(){
-    elem3-=1;
-    cost-=50.30;
-    return(elem3)
-}
-
-  elem4=0;
-function addToCard4(){
-    elem4+=1;
-    cost+=124.45;
-    return(elem4)
-}
-function deleteFromCard4(){
-    elem4-=1;
-    cost-=124.45;
-    return(elem4)
-}
-function cartDisplay(){
-    confirm(`your shopping card contains:
-
-    ${elem1}:  Stylish Mens Jacket .
-    ${elem2}:  Long mens Coat .
-    ${elem3}:  Shirt For Women . 
-    ${elem4}:  Short mens Coat .
-
-    the total cost:  € ${cost} EUR`);
-}
-function cartClear(){
-    elem1=0;
-    elem2=0;
-    elem3=0;
-    elem4=0;
-    cost=0;
-    cartDisplay();
-}
+////////////////////////////////////////////////////////////////
+const heartBtn = document.querySelectorAll("#imgH");
+//console.log(heartBtn)
+Array.from(heartBtn).map((el) => {
+  el.addEventListener("click", () => {
+    el.style.filter = "invert(90%) Sepia(90%) saturate(3207%) hue-rotate(240deg) brightness(90%) contrast(90%)";
+  });
+})
+/////////////////////////////////////////////////////////////////
