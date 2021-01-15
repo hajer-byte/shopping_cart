@@ -138,3 +138,27 @@ grid-template-rows: 1fr 1fr 1fr;
     display:block;
     padding: 2rem;
 }
+.icon{
+    color: dimgrey;
+    size: 0.5rem !important;
+}
+.p-0 {
+    max-width: 30rem;
+    display: flex;
+    justify-content: flex-end;
+}
+p {
+    display: block;
+    margin-left: 10rem;
+}
+.quantity{
+    height: 2rem;
+}
+.block {
+    display: block;
+    padding: 2rem;
+    height: 12rem !important;
+}
+.buttons{
+    
+}

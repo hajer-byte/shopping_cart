@@ -67,23 +67,22 @@
           />
           <div class="card-body">
             <h5 class="card-title">
-              <span class="elementName">Stylish Mens Jacket</span><br />
-              <img
-                src="https://img.icons8.com/ios-glyphs/30/000000/like.png"
-                id="imgH"
-              />
+             <span class="elementName">Stylish Mens Jacket</span><br />
+            <i class="fas fa-heart icon"></i>
             </h5>
             <p class="card-text">
               <span class="hover"
-                >Price: € <span class="price">105</span> EUR <br
+                >Price: € <span class="prix">105</span> EUR <br
               /></span>
               2018 New Fashion Brand Clothing Jacket Men Casual Mandarin Collar.
             </p>
-            <div class="button">
-              <a class="btn btn-outline-dark btnPlus"> add to cart </a>
-              <a class="btn btn-outline-dark btnMn"> remove from cart </a>
+              <div class="buttons">
+            <button class="add">+</button>
+            <span class="achat">0</span>
+            <button class="moins">-</button>
             </div>
           </div>
+          <a class="button btn btn-outline-dark btnMn d-flex justify-content-center"> <i class="fas fa-trash icon">remove from cart</i> </a>
         </div>
 
         <div
@@ -98,22 +97,21 @@
           <div class="card-body">
             <h5 class="card-title">
               <span class="elementName">mens Coat</span><br />
-              <img
-                src="https://img.icons8.com/ios-glyphs/30/000000/like.png"
-                class="imgH"
-              />
+            <i class="fas fa-heart icon"></i>
             </h5>
             <p class="card-text">
               <span class="hover"
-                >Price: € <span class="price">200</span> EUR<br
+                >Price: € <span class="prix">200</span> EUR<br
               /></span>
               Denim-Leaf Men Coat Thick Warm Wool Coat Slim Fit.
             </p>
-            <div class="button">
-              <a class="btn btn-outline-dark btnPlus"> add to cart </a>
-              <a class="btn btn-outline-dark btnMn"> remove from cart </a>
+            <div class="buttons">
+            <button class="add">+</button>
+            <span class="achat">0</span>
+            <button class="moins">-</button>
             </div>
           </div>
+          <a class="button btn btn-outline-dark btnMn d-flex justify-content-center"> <i class="fas fa-trash icon">remove from cart</i> </a>
         </div>
 
         <div
@@ -127,29 +125,28 @@
           />
           <div class="card-body">
             <h5 class="card-title">
-              <span class="elementName">Shirt For Women</span> <br />
-              <img
-                src="https://img.icons8.com/ios-glyphs/30/000000/like.png"
-                class="imgH"
-              />
+            <span class="elementName">Shirt For Women</span> <br />
+            <i class="fas fa-heart icon"></i>
             </h5>
             <p class="card-text">
               <span class="hover"
-                >Price:€ <span class="price">50</span> EUR <br
+                >Price:€ <span class="prix">50</span> EUR <br
               /></span>
               Casual V- Neck Stripes Loose Shirt For Women.
             </p>
-            <div class="button">
-              <a class="btn btn-outline-dark btnPlus"> add to cart </a>
-              <a class="btn btn-outline-dark btnMn"> remove from cart </a>
+              <div class="buttons">
+            <button class="add">+</button>
+            <span class="achat">0</span>
+            <button class="moins">-</button>
             </div>
           </div>
+          <a class="button btn btn-outline-dark btnMn d-flex justify-content-center"> <i class="fas fa-trash icon">remove from cart</i> </a>>
         </div>
       </div>
       <div class="card CardB bg-dark text-white block" id="bottom">
         <h5 class="card-title">Your shopping cart:</h5>
         <div>
-          the total price in your cart is : <span class="total">0</span>
+          the total price in your cart is : <span id="total">0</span>
         </div>
         <p id="CART"></p>
       </div>
@@ -167,5 +164,6 @@
       async
     ></script>
     <script src="./js/cart.js" async></script>
+    <script src="https://kit.fontawesome.com/fe0c2855e9.js" crossorigin="anonymous"></script>
   </body>
 </html>
